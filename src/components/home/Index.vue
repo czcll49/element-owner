@@ -1,9 +1,6 @@
 <template>
     <div>
         <p>{{ msg }}</p>
-        <p>
-            <a href="javascript: void(0);" @click="del(index)" v-for="(l, index) in list" :key="index">{{ l }}</a>
-        </p>
         <el-calendar v-model="value"></el-calendar>
     </div>
 </template>
@@ -17,10 +14,7 @@
         props: {},
         data() {
 
-            let list = [1, 2, 3, 4, 5, 6];
-
             return {
-                list,
                 msg: '信息',
                 value: new Date()
             }
