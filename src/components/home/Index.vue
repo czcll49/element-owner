@@ -26,13 +26,14 @@
             }
         },
         mounted() {
-            this.initData()
+            this.initData();
         },
         methods: {
             initData() {
                 console.log('初始化方法');
             },
             del(index) {
+                console.log(Vue.version);
                 Vue.delete(this.list, index);
             }
         },
